@@ -9,6 +9,6 @@ jobs:
     steps:
       - name: Dump GitHub context
         id: github_context_step
-        run: echo $JSON
+        run: echo $JSON | jq .
         env:
           JSON: ${{ toJSON(github) }}
